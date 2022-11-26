@@ -8,6 +8,6 @@
     - name: enable configuration
       file: dest=/etc/nginx/sites-enabled/default src=/etc/nginx/sites-available/default state=link
     - name: copy index.html
-      template: src=/root/exam-pristov/index.html dest=/usr/share/nginx/html/index.html mode=0664
+      template: src=/root/site/index.html dest=/usr/share/nginx/html/index.html mode=0664
     - name: restart nginx
       service: name=nginx state=restarted
